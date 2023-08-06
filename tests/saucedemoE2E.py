@@ -96,5 +96,6 @@ class TestSauceDemo(BaseClass):
         self.driver.find_element(By.ID, "finish").click()
         thank_you = self.driver.find_element(By.XPATH, "//h2[@class = 'complete-header']")
         assert thank_you.is_displayed()
-
+        allure.attach(self.driver.get_screenshot_as_png(),
+                      name="thank you", attachment_type=AttachmentType.PNG)
 
