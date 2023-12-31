@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestSauceDemo(BaseClass):
-
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login(self):
         self.driver.implicitly_wait(5)
         login_page = Login(self.driver)
@@ -23,9 +23,10 @@ class TestSauceDemo(BaseClass):
         login_page.get_user_name().send_keys("standard_user")
         login_page.get_password().send_keys("secret_sauce")
         login_page.get_login_button().click()
+        allure.attach(self.driver.get_screenshot_as_png(),
+                      name="Login", attachment_type=AttachmentType.PNG)
         login_page.get_menu_icon().click()
         login_page.get_logout_link().click()
-
         # 2nd user login
         login_page.get_user_name().send_keys("locked_out_user")
         login_page.get_password().send_keys("secret_sauce")
@@ -46,12 +47,12 @@ class TestSauceDemo(BaseClass):
     def test_add_to_cart(self):
         self.driver.implicitly_wait(5)
         self.login("standard_user", "secret_sauce")
-        # wait.until(EC.presence_of_element_located(self.driver.find_element(By.XPATH, "//span[@class='title']")))
+        #wait.until(EC.presence_of_element_located(self.driver.find_element(By.XPATH, "//span[@class='title']")))
         home_page = HomePage(self.driver)
         cart_page = CartPage(self.driver)
-        items_listed = self.driver.find_elements(By.XPATH, "//div[@class = 'inventory_item']")
+        items_listed = self.driver.find_elements(By.XPATH, "//button[@class='btn btn_primary btn_small btn_inventory ']")
         for items in items_listed:
-            items.find_element(By.XPATH, "div//button[@class = 'btn btn_primary btn_small btn_inventory']").click()
+            items.click()
 
         home_page.get_cart_icon().click()
         self.driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
@@ -68,7 +69,7 @@ class TestSauceDemo(BaseClass):
         check_out_page.get_continue_button().click()
         self.driver.save_screenshot("after_checkout.png")
         allure.attach(self.driver.get_screenshot_as_png(),
-                      name="checkout",attachment_type=AttachmentType.PNG)
+                      name="checkout", attachment_type=AttachmentType.PNG)
 
     @pytest.fixture(params=TestData.checkout_data)
     def get_data(self, request):
@@ -98,4 +99,3 @@ class TestSauceDemo(BaseClass):
         assert thank_you.is_displayed()
         allure.attach(self.driver.get_screenshot_as_png(),
                       name="thank you", attachment_type=AttachmentType.PNG)
-
