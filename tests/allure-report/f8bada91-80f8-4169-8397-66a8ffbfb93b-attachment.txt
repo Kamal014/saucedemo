@@ -1,0 +1,2 @@
+[32mINFO    [0m test_login:saucedemoE2E.py:32 standard_user login successful
+[33mWARNING [0m test_login:saucedemoE2E.py:42 Epic sadface: Sorry, this user has been locked out.

@@ -1,3 +1,5 @@
+import logging
+
 import allure
 import pytest
 from allure_commons.types import AttachmentType
@@ -17,6 +19,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class TestSauceDemo(BaseClass):
     @allure.severity(allure.severity_level.CRITICAL)
     def test_login(self):
+        log = self.get_logger()
         self.driver.implicitly_wait(5)
         login_page = Login(self.driver)
         # 1st user login
@@ -26,7 +29,9 @@ class TestSauceDemo(BaseClass):
         allure.attach(self.driver.get_screenshot_as_png(),
                       name="Login", attachment_type=AttachmentType.PNG)
         login_page.get_menu_icon().click()
+        log.info("standard_user login successful")
         login_page.get_logout_link().click()
+
         # 2nd user login
         login_page.get_user_name().send_keys("locked_out_user")
         login_page.get_password().send_keys("secret_sauce")
@@ -34,7 +39,7 @@ class TestSauceDemo(BaseClass):
 
         error_message = self.driver.find_element(By.XPATH, "//h3[@data-test= 'error']").text
         assert "Epic sadface: Sorry, this user has been locked out." in error_message
-
+        log.warning(error_message)
         # 3rd user login
         login_page.get_user_name().clear()
         login_page.get_user_name().send_keys("problem_user")
@@ -47,10 +52,10 @@ class TestSauceDemo(BaseClass):
     def test_add_to_cart(self):
         self.driver.implicitly_wait(5)
         self.login("standard_user", "secret_sauce")
-        #wait.until(EC.presence_of_element_located(self.driver.find_element(By.XPATH, "//span[@class='title']")))
         home_page = HomePage(self.driver)
         cart_page = CartPage(self.driver)
-        items_listed = self.driver.find_elements(By.XPATH, "//button[@class='btn btn_primary btn_small btn_inventory ']")
+        items_listed = self.driver.find_elements(By.XPATH,
+                                                 "//button[@class='btn btn_primary btn_small btn_inventory ']")
         for items in items_listed:
             items.click()
 
@@ -93,9 +98,10 @@ class TestSauceDemo(BaseClass):
             self.driver.find_element(By.XPATH, "//div[@class= 'summary_info_label summary_total_label']").text.split(
                 '$')[1])
         assert total_price_to_paid == total_price_to_paid_on_screen
-
+        self.get_logger().info(f"Total price: {total_price_to_paid}")
         self.driver.find_element(By.ID, "finish").click()
         thank_you = self.driver.find_element(By.XPATH, "//h2[@class = 'complete-header']")
         assert thank_you.is_displayed()
         allure.attach(self.driver.get_screenshot_as_png(),
                       name="thank you", attachment_type=AttachmentType.PNG)
+        self.get_logger().info("Purchased Successful!")

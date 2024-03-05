@@ -1,0 +1,63 @@
+2024-03-04 12:18:43,205 :INFO : test_login :standard_user login successful
+2024-03-04 12:18:57,369 :INFO : test_login :standard_user login successful
+2024-03-04 12:18:57,369 :INFO : test_login :standard_user login successful
+2024-03-04 23:38:50,447 :INFO : test_login :standard_user login successful
+2024-03-04 23:38:50,958 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:39:02,015 :INFO : test_login :standard_user login successful
+2024-03-04 23:39:02,015 :INFO : test_login :standard_user login successful
+2024-03-04 23:39:02,564 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:39:02,564 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:50:57,988 :INFO : test_login :standard_user login successful
+2024-03-04 23:50:58,469 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:51:05,803 :INFO : test_login :standard_user login successful
+2024-03-04 23:51:05,803 :INFO : test_login :standard_user login successful
+2024-03-04 23:51:06,277 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:51:06,277 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:54:11,592 :INFO : test_login :standard_user login successful
+2024-03-04 23:54:12,316 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:54:15,109 :INFO : test_overview :Total price: 140.34
+2024-03-04 23:54:15,340 :INFO : test_overview :Purchased Successful!
+2024-03-04 23:54:15,340 :INFO : test_overview :Purchased Successful!
+2024-03-04 23:54:22,606 :INFO : test_login :standard_user login successful
+2024-03-04 23:54:22,606 :INFO : test_login :standard_user login successful
+2024-03-04 23:54:23,478 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:54:23,478 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-04 23:54:27,580 :INFO : test_overview :Total price: 140.34
+2024-03-04 23:54:27,580 :INFO : test_overview :Total price: 140.34
+2024-03-04 23:54:27,580 :INFO : test_overview :Total price: 140.34
+2024-03-04 23:54:27,843 :INFO : test_overview :Purchased Successful!
+2024-03-04 23:54:27,843 :INFO : test_overview :Purchased Successful!
+2024-03-04 23:54:27,843 :INFO : test_overview :Purchased Successful!
+2024-03-04 23:54:27,843 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:00:55,593 :INFO : test_login :standard_user login successful
+2024-03-05 00:00:56,049 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:00:58,860 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:00:59,114 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:00:59,114 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:01:05,695 :INFO : test_login :standard_user login successful
+2024-03-05 00:01:05,695 :INFO : test_login :standard_user login successful
+2024-03-05 00:01:06,269 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:01:06,269 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:01:09,385 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:01:09,385 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:01:09,385 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:01:09,683 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:01:09,683 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:01:09,683 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:01:09,683 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:14,509 :INFO : test_login :standard_user login successful
+2024-03-05 00:08:14,971 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:08:17,468 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:08:17,718 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:17,718 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:22,753 :INFO : test_login :standard_user login successful
+2024-03-05 00:08:22,753 :INFO : test_login :standard_user login successful
+2024-03-05 00:08:23,349 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:08:23,349 :WARNING : test_login :Epic sadface: Sorry, this user has been locked out.
+2024-03-05 00:08:26,785 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:08:26,785 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:08:26,785 :INFO : test_overview :Total price: 140.34
+2024-03-05 00:08:27,043 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:27,043 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:27,043 :INFO : test_overview :Purchased Successful!
+2024-03-05 00:08:27,043 :INFO : test_overview :Purchased Successful!
